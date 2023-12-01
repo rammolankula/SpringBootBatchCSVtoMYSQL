@@ -102,16 +102,16 @@ Job can be created using below details
 </pre>
 ##### Definitions of Reader,Processor,Writter
 <pre>
-1.**Reader**: It will read data from source location. we need to define
+⮕**Reader**: It will read data from source location. we need to define
   one class that reads data as item line by line
 </pre>
 <pre>
-2.**Processor**: it will do data conversions, calculations,..etc
+⮕**Processor**: it will do data conversions, calculations,..etc
   we need to define one class that implements ItemProcessor
 </pre>
 
 <pre>
-3.**Writer**: It will write data to destination (ex: database). we need
+**Writer**: It will write data to destination (ex: database). we need
   to define a class that implements ItemWriter(I) and override write method.
 </pre>
 
