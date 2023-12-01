@@ -85,7 +85,35 @@ Job can be created using below details
 &#8594; next step
 &#8594; Finally build
 </pre>
+##### Code Order 
+<pre>
+&#8594; 1.Reader
+&#8594; 2.Processor 
+&#8594; 3.Writer
+&#8594; 4.Listener
+&#8594; 5.BatchConfig
+&#8594;   a.Reader Object
+&#8594;   b.Processor object
+&#8594;  c.Writer object
+&#8594;   d.Step configuration using StepBuilderFactory
+&#8594;   e.Job Configuration using JobBuilderFactory
+&#8594; 6.Runner (Job Luncher code)
+&#8594; 7.properties file
+</pre>
+##### Definitions of Reader,Processor,Writter
+<pre>
+1.**Reader**: It will read data from source location. we need to define
+  one class that reads data as item line by line
+</pre>
+<pre>
+2.**Processor**: it will do data conversions, calculations,..etc
+  we need to define one class that implements ItemProcessor
+</pre>
 
+<pre>
+3.**Writer**: It will write data to destination (ex: database). we need
+  to define a class that implements ItemWriter(I) and override write method.
+</pre>
 
 
 
