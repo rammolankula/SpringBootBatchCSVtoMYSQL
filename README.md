@@ -111,7 +111,7 @@ Job can be created using below details
 </pre>
 
 <pre>
-**Writer**: It will write data to destination (ex: database). we need
+⮕**Writer**: It will write data to destination (ex: database). we need
   to define a class that implements ItemWriter(I) and override write method.
 </pre>
 
