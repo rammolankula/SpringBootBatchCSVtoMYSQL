@@ -68,6 +68,7 @@ A) List T works only for same type of Object
 </pre>
    
 #### Step can be created using below details
+<pre>
 &#8594; StepName
 &#8594; chunk size with Input type and OutPut Type
 &#8594; Item Reader class Object
