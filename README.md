@@ -176,11 +176,9 @@ public class Test{
   }
 </pre>
   
- Anonymous =name-less class + Object created at same time
-===============================================================================================
-Spring Boot Batch : CSV to MySql
-==================================================================
-CSV: Comma Separated Values(old Excel File Type)
+##### Anonymous =name-less class + Object created at same time
+##### Spring Boot Batch : CSV to MySql
+##### CSV: Comma Separated Values(old Excel File Type)
 <pre>
 &#8594; CSV is a file type, that holds multiple lines data
 &#8594; Every line data contains comma symbols between two values
