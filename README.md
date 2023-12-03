@@ -244,5 +244,54 @@ step#12 set data to SQL using objects(from list) and create as JDBC batch
         only we need to code Processor
 </pre>
 
+##### ItemReader
+<pre>
+&#8594; ItemReader<T> is a interface so,use its impl class given by springboot Batch
+&#8594; Here one Impl class is : FlateFileItemReader<T> This is used to read data from files.
 
-
+&#8594; To Provide filename and its location use :Resource(I)
+        its impl class is : ClassPathResource(src/main/resource)
+                      FileSystemResource(drive folder).
+					  
+&#8594; After reading file,read data line by line using : LineMapper(I)
+        its impl class is : DefaultLineMapper
+ 
+&#8594; After reading one line,tokenizer data(read values) using: LineTokenizer (I)
+        its impl class is: DelimiedLineTokenizer
+        Provide names for every value(like variableNames)
+  
+&#8594; Create one object and set data to variables using names, with fieldSetMapper(I)
+        its impl class is :BeanWrapperFieldSetMapper
+        Provide class type for object creation.(which class object do ypu want create)
+===============================================================================
+</pre>
+#### ItemWriter T
+<pre>
+&#8594; Here ,ItemWriter<T> is a interface. to write data to DB using JDBC concept use Impl
+ class : JdbcBatchItemWriter T
+ 
+&#8594; It needs one database connection: DataSource(I) Impl class: DriverManagerDataSource
+&#8594; Also one sql query(String) [INSERT...] with named parameters
+&#8594; Provide params (inputs) to INSERT query using object variable names
+&#8594; with ItemSqlParameterSourceProvider --<> BeanPropertyItemSqlParameterSourceProvider
+  </pre>
+  
+##### ---------------------------------------------------------------------
+<pre>
+1.Reader(Pre-Defined)
+2.Processor
+3.Writer (Pre-Defined)
+4.Listener
+5.BatchConfig
+  a.Reader object
+  b.Processor Object
+  c.Writer object
+  d.Listener object
+  e.StepBuilderFactory autowire
+  f.Step object
+  g.JobBuilderFactory
+  h.Job Object
+6.JobRunner
+7.Properties
+8.Model Class 
+</pre>
