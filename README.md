@@ -114,6 +114,50 @@ Job can be created using below details
 ⮕Writer: It will write data to destination (ex: database). we need
   to define a class that implements ItemWriter(I) and override write method.
 </pre>
+<pre>
+Class A{}
 
+&#8594; 1 Creating Object
+A a=new A();
+
+&#8594; 2 Anonymous Inner class + Object creation
+A a=new A(){
+
+};
+&#8594; 3 Instance Block + Anonymous Inner class + Object creation
+A a=new A(){
+{
+}
+};
+</pre>
+###### Block -3 types, Instance Block,Static block,local block(for ,if,while)
+ 
+###### What is Instance Block where it is used?
+<pre>
+ A) Instance Blocks are used to execute any logic before constructor.\
+    if constructor is not available then we can use even instance block
+	
+	&#8594; Incase of anonymous inner class(No CLASS NAME), we can not write
+	    constructor then we use Instance Block.
+	
+	
+	&#8594; Anonymous inner class code is good for singletime execution, they are faster in
+	     load and unload even.
+</pre>
+####Example:::
+<pre>
+public class Test{
+   public static void main(String[] args){
+    A ob=new A(){
+	//we can not write like $1() {} as like constructor
+	//so use instance block
+	  {
+	  System.out.println("Ok-IB-2");
+	  }
+	
+	}
+   }
+}
+ </pre>
 
 
